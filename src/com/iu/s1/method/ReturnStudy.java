@@ -7,6 +7,11 @@ public class ReturnStudy {
 	
 	//접근지정자 [그외지정자] 리턴타입 메서드명([매개변수 선언]){}
 	
+	public Scanner test4() {
+		Scanner sc = new Scanner(System.in);
+		return sc;
+	}
+	
 	public String test3() {
 		//키보드로 부터 이름을 입력 받고 리턴
 		Scanner sc = new Scanner(System.in);
