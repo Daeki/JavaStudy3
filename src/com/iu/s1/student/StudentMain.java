@@ -1,4 +1,4 @@
-package com.iu.s1.method;
+package com.iu.s1.student;
 
 public class StudentMain {
 
