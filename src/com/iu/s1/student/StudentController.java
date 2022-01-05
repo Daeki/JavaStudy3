@@ -13,7 +13,8 @@ public class StudentController {
 		while(check) {
 			System.out.println("1. 학생들의 정보 입력");
 			System.out.println("2. 학생들의 정보 출력");
-			System.out.println("3. 프 로 그 램  종료");
+			System.out.println("3. 학생정보 검색 출력");
+			System.out.println("4. 프 로 그 램  종료");
 			int select = sc.nextInt();
 			
 			switch (select) {
@@ -21,7 +22,23 @@ public class StudentController {
 				students = studentUtil.makeStudents();
 				break;
 			case 2 :
-				studentView.viewStudents(students);
+				if(students != null) {
+					studentView.viewStudents(students);
+				}else {
+					studentView.viewMessage("학생정보를 먼저 입력하세요");
+				}
+				break;
+			case 3:
+				if(students == null) {
+					studentView.viewMessage("학생 정보가 없습니다");
+					continue;
+				}
+				Student student = studentUtil.search(students);
+				if(student != null) {
+					studentView.viewStudent(student);
+				}else {
+					studentView.viewMessage("검색 결과가 없습니다");
+				}
 				break;
 			default :
 				//check = !check;
