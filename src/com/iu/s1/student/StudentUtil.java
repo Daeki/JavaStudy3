@@ -4,6 +4,15 @@ import java.util.Scanner;
 
 public class StudentUtil {
 	
+	//학생 객체를 생성하고 정보를 입력 받는 곳
+	
+	public void search() {
+		//검색할 학생의 번호를 입력
+		//입력 받은 번호와 일치하는 학생을 찾아서 출력
+		
+	}
+	
+	
 	public Student []  makeStudents() {
 		Scanner sc = new Scanner(System.in);
 		//학생의 수를 입력 받음
