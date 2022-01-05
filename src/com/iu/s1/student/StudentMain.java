@@ -5,6 +5,7 @@ public class StudentMain {
 	public static void main(String[] args) {
 		
 		StudentView sv = new StudentView(); 
+		StudentUtil su = new StudentUtil();
 		
 		Student [] students = new Student[2];
 		
@@ -26,8 +27,14 @@ public class StudentMain {
 		student.math=70;
 		students[1]=student;
 		
-		
-		sv.viewStudents(students);
+		Student student2 = su.search(students);
+		if(student2 != null) {
+			sv.viewStudent(student2);
+		}else {
+			sv.viewMessage("학생이 없다");
+		}
+		System.out.println("종료");
+		//sv.viewStudents(students);
 		
 
 	}
