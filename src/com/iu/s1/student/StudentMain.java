@@ -6,7 +6,7 @@ public class StudentMain {
 		StudentController sc = new StudentController();
 		sc.start();
 		
-//		Student student = new Student();
+		Student student = new Student();
 //		student.name="iu";
 //		student.kor=10;
 //		student.math=10;
